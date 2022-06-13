@@ -1,0 +1,913 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	height: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ubuntu-condensed-regular - cyrillic */
+@font-face {
+    font-family: 'Ubuntu Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/ubuntu-condensed-v15-cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/ubuntu-condensed-v15-cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* schoolbell-regular - latin */
+@font-face {
+    font-family: 'Schoolbell';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/schoolbell-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/schoolbell-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* open-sans-300 - cyrillic */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+         url('../fonts/open-sans-v28-cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/open-sans-v28-cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  html{
+      box-sizing: border-box;
+  }
+  *, *::before, *::after{
+      box-sizing: inherit;
+  }
+
+  body{
+    margin: 0px, 262px, 0px, 235px;
+    font-family: 'Open Sans', 'Schoolbell' 'Ubuntu Condensed';
+
+  }
+
+  html {
+    width: 100%;
+    height: 100vh;
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
+  
+
+    .Pro{
+      
+position: absolute;
+width: 68px;
+height: 0px;
+left: 343px;
+top: 37px;
+
+font-family: 'Schoolbell';
+font-style: normal;
+font-weight: 400;
+font-size: 50px;
+line-height: 0px;
+/* identical to box height, or 0% */
+
+display: flex;
+align-items: flex-end;
+text-transform: capitalize;
+
+color: #000000;
+
+transform: matrix(0.92, 0, -0.47, 1, 0, 0);
+    }
+    
+    .Sport{
+      position: absolute;
+width: 368.28px;
+height: 49.68px;
+left: 253.91px;
+top: 73.05px;
+
+font-family: 'Schoolbell';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 84px;
+display: flex;
+align-items: flex-end;
+
+color: #000000;
+
+mix-blend-mode: normal;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+transform: matrix(0.93, -0.02, -0.41, 1, 0, 0);
+    }
+
+    .O_nas{
+      
+position: absolute;
+width: 81px;
+height: 64px;
+left: 1056px;
+top: 42px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 39.5px;
+line-height: 64px;
+/* identical to box height, or 161% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.03em;
+text-transform: capitalize;
+text-decoration: none;
+color: #000000;
+
+    }
+   
+    .Otzivi{
+      position: absolute;
+width: 120px;
+height: 64px;
+left: 1238px;
+top: 41px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 39.5px;
+line-height: 64px;
+/* identical to box height, or 161% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.03em;
+text-transform: capitalize;
+text-decoration: none;
+
+color: #000000;
+    }
+
+    .Kontakti{
+      position: absolute;
+width: 139px;
+height: 64px;
+left: 1460px;
+top: 42px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 39.5px;
+line-height: 64px;
+/* identical to box height, or 161% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.03em;
+text-transform: capitalize;
+text-decoration: none;
+
+color: #000000;
+    }
+
+    .Glavnaya{
+      position: absolute;
+width: 114px;
+height: 64px;
+left: 1668px;
+top: 42px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 39.5px;
+line-height: 64px;
+/* identical to box height, or 161% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.03em;
+text-transform: capitalize;
+text-decoration: none;
+
+color: #000000;
+    }
+
+    .tovari_for_sport{
+      position: absolute;
+width: 385px;
+height: 73px;
+left: 400px;
+top: 51px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 145.8%;
+/* identical to box height, or 73px */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.04em;
+text-decoration: none;
+
+color: #000000;
+    }
+
+    .O_nas:hover, .O_nas:hover:focus, .O_nas:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .Otzivi:hover, .Otzivi:hover:focus, .Otzivi:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .Kontakti:hover, .Kontakti:hover:focus, .Kontakti:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .Glavnaya:hover, .Glavnaya:hover:focus, .Glavnaya:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .Podpisivaytes{
+      position: absolute;
+width: 517px;
+height: 80px;
+left: 700px;
+top: 1080px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 42px;
+line-height: 145.8%;
+/* or 87px */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.04em;
+
+color: #000000;
+
+opacity: 0.5;
+    }
+    .vk{
+      position: absolute;
+width: 60px;
+height: 60px;
+left: 712px;
+top: 1167px;
+    }
+
+    .tg{   
+position: absolute;
+width: 60px;
+height: 60px;
+left: 862px;
+top: 1167px;
+    }
+
+    .youtube{
+      position: absolute;
+width: 60px;
+height: 60px;
+left: 1003px;
+top: 1167px;
+    }
+
+    .instagram{
+      position: absolute;
+width: 60px;
+height: 60px;
+left: 1144px;
+top: 1167px;
+
+
+    }
+
+    .instagram:hover, .instagram:focus, .instagram:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .youtube:hover, .youtube:focus, .youtube:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .tg:hover, .tg:focus, .tg:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .vk:hover, .vk:focus, .vk:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .black_polosa{
+      position: absolute;
+width: 1920px;
+height: 130px;
+left: 0px;
+top: 127px;
+
+background: #000000;
+
+    }
+
+    .crossi_kedi{
+     
+      position: absolute;
+      width: 206px;
+      height: 64px;
+      left: 605px;
+      top: 160px;
+      
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 64px;
+      /* identical to box height, or 254% */
+      
+      display: flex;
+      align-items: flex-end;
+      letter-spacing: -0.03em;
+      
+      color: #000000;
+      
+      mix-blend-mode: normal;
+      text-decoration: none;
+    }
+
+    .fon_crossi_kedi{
+     
+position: absolute;
+width: 222px;
+height: 37px;
+left: 593px;
+top: 174px;
+
+background: #FFFFFF;
+opacity: 0.8;
+border-radius: 10px;
+    }
+
+    .fon_odejda{
+      
+position: absolute;
+width: 109.66px;
+height: 37px;
+left: 904px;
+top: 173px;
+
+background: #FFFFFF;
+opacity: 0.8;
+border-radius: 10px;
+    }
+
+    .odejda_name{
+      
+position: absolute;
+width: 104px;
+height: 64px;
+left: 915px;
+top: 159px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 64px;
+/* identical to box height, or 254% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.03em;
+
+color: #000000;
+
+mix-blend-mode: normal;
+text-decoration: none;
+    }
+
+    .fon_fitnes{
+      position: absolute;
+width: 191px;
+height: 37px;
+left: 1085px;
+top: 174px;
+
+background: #FFFFFF;
+opacity: 0.8;
+border-radius: 10px;
+    }
+
+    .fitnes_name{
+      position: absolute;
+width: 236px;
+height: 64px;
+left: 1094px;
+top: 160px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 23px;
+line-height: 64px;
+/* identical to box height, or 276% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.03em;
+
+color: #000000;
+
+mix-blend-mode: normal;
+text-decoration: none;
+    }
+
+  .fio_forma{
+    position: absolute;
+width: 149.49px;
+height: 33.82px;
+left: 120px;
+top: 210px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 24px;
+/* or 96% */
+
+display: flex;
+align-items: flex-end;
+
+color: #373A3C;
+  }
+
+  .forma_fio_fon{
+    box-sizing: border-box;
+
+position: absolute;
+width: 799.27px;
+height: 53.55px;
+left: 120px;
+top: 246.1px;
+
+background: #FFFFFF;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+  }
+
+  .email_forma{
+    position: absolute;
+width: 105.09px;
+height: 33.82px;
+left: 120px;
+top: 335px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 24px;
+/* or 96% */
+
+display: flex;
+align-items: flex-end;
+
+color: #373A3C;
+  }
+
+  .email_fon{
+    box-sizing: border-box;
+
+position: absolute;
+width: 799.27px;
+height: 53.55px;
+left: 120px;
+top: 370.1px;
+
+background: #FFFFFF;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+  }
+
+  .adres_forma{
+    position: absolute;
+width: 200px;
+height: 34px;
+left: 120px;
+top: 457px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 24px;
+/* or 96% */
+
+display: flex;
+align-items: flex-end;
+
+color: #373A3C;
+  }
+
+  .adres_fon{
+    box-sizing: border-box;
+
+position: absolute;
+width: 799.27px;
+height: 53.55px;
+left: 120px;
+top: 493.97px;
+
+background: #FFFFFF;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+  }
+
+  .nomer_tovara_forma{
+    position: absolute;
+width: 489px;
+height: 34px;
+left: 120px;
+top: 585px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 24px;
+/* or 96% */
+
+display: flex;
+align-items: flex-end;
+
+color: #373A3C;
+  }
+
+  .nomer_tovara_fon{
+    box-sizing: border-box;
+
+position: absolute;
+width: 799.27px;
+height: 190.26px;
+left: 120px;
+top: 618.1px;
+
+background: #FFFFFF;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+padding-bottom: 155px;
+
+  }
+
+  .kupit{
+    position: absolute;
+width: 120px;
+height: 24px;
+left: 132px;
+top: 853px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 45px;
+line-height: 24px;
+text-decoration: none;
+
+color: #000000;
+  }
+
+  .kupit_fon{
+    position: absolute;
+width: 144px;
+height: 54px;
+left: 120px;
+top: 842px;
+
+background: #B9C1E9;
+border-radius: 10px;
+  }
+
+  .kupit:hover, .kupit:focus, .kupit:active{
+    opacity: .75;
+    color: #717EBB;
+  }
+
+  .card_fon{
+    
+position: absolute;
+width: 610px;
+height: 337px;
+left: 1050px;
+top: 374px;
+
+background: linear-gradient(106.15deg, #3431C2 6.17%, #CD2525 102.88%);
+border-radius: 20px;
+  }
+
+  .layer{
+    position: absolute;
+width: 610px;
+height: 337px;
+left: 1050px;
+top: 374px;
+
+background: rgba(255, 255, 255, 0.03);
+backdrop-filter: blur(80px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 20px;
+  }
+
+  .card_face{
+    position: absolute;
+width: 335px;
+height: 185px;
+left: 1050px;
+top: 374px;
+  }
+
+  .fio_fon{
+    position: absolute;
+width: 250px;
+height: 35px;
+left: 1080px;
+top: 630px;
+
+background: #C4C4C4;
+border-radius: 10px;
+opacity: 0.3;
+  }
+
+  .nomer_card{
+    position: absolute;
+width: 126px;
+height: 24px;
+left: 1080px;
+top: 605px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+opacity: 0.9;
+  }
+
+  .vladelec_fon{
+    position: absolute;
+width: 210px;
+height: 35px;
+left: 1080px;
+top: 560px;
+border-radius: 10px;
+
+background: rgba(255, 255, 255, 0.2);
+  }
+ 
+  .vladelec_card{
+    position: absolute;
+width: 127px;
+height: 24px;
+left: 1080px;
+top: 535px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+
+color: white;
+opacity: 0.9;
+  }
+
+  .visa{
+    position: absolute;
+
+font-family: 'Ubuntu Condesed';
+font-size: 40px;
+width: 85px;
+height: 85px;
+left: 1530px;
+top: 420px;
+
+color: white;
+  }
+
+  .black_card_face{
+    
+position: absolute;
+width: 565px;
+height: 312px;
+left: 1250px;
+top: 470px;
+
+background: rgba(255, 255, 255, 0.03);
+backdrop-filter: blur(80px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 20px;
+  }
+
+  .black_card_fon{
+    position: absolute;
+width: 565px;
+height: 312px;
+left: 1250px;
+top: 470px;
+
+background: linear-gradient(106.15deg, #282828 1.61%, #0B0B0B 93.48%);
+border-radius: 20px;
+  }
+
+  .cvc_fon{
+    position: absolute;
+    width: 93.6px;
+    height: 42px;
+    left: 1690px;
+    top: 550px;
+    
+    background: #C4C4C4;
+    border-radius: 10px;
+    opacity: 0.3;
+  }
+
+  .cvc{
+    position: absolute;
+width: 83px;
+height: 24px;
+left: 1693px;
+top: 520px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+  }
+
+  .label{
+    
+position: absolute;
+    top: 300px;
+    left: 120px;
+    color: gray;
+    opacity: 0.5;
+
+    font-family: 'Ubuntu Condensed';
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .label1{
+    position: absolute;
+
+    top: 425px;
+    left: 120px;
+    color: gray;
+    opacity: 0.5;
+
+    font-family: 'Ubuntu Condensed';
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  .label2{
+    position: absolute;
+
+    top: 549px;
+    left: 120px;
+    color: gray;
+    opacity: 0.5;
+
+    font-family: 'Ubuntu Condensed';
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .btn{
+    position:absolute;
+
+    left: 132px;
+    top: 853px;
+  }
+
+  .ssform{
+
+    position:absolute;
+    
+    top: 500px;
+    left: 120px;
+  }
+
+  /* =========================== MODAL ===========================*/
+  .modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    opacity: .85;
+    z-index: 10;
+
+    font-family: 'Ubuntu Condensed';
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal__inner{
+    background-color: #fff;
+    z-index: 11;
+    width: 500px;
+    height: 150px;
+    padding: 15px;
+  }
+  .modal__wrapper{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #353535;
+  }
+  .modal__close{
+    font-size: 15px;
+    color: #ccc;
+  }
+  .modal__title{
+    font-size: 35px;
+    padding-bottom: 5px;
+  }
+  .modal__text{
+    margin-top: 25px;
+    font-size: 20px;
+  }
+  
+  .none{
+    display: none;
+  }

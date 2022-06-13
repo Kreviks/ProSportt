@@ -1,0 +1,464 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	height: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ubuntu-condensed-regular - cyrillic */
+@font-face {
+    font-family: 'Ubuntu Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/ubuntu-condensed-v15-cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/ubuntu-condensed-v15-cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* schoolbell-regular - latin */
+@font-face {
+    font-family: 'Schoolbell';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/schoolbell-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/schoolbell-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* open-sans-300 - cyrillic */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+         url('../fonts/open-sans-v28-cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/open-sans-v28-cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  html{
+      box-sizing: border-box;
+  }
+  *, *::before, *::after{
+      box-sizing: inherit;
+  }
+
+  body{
+    margin: 0px, 262px, 0px, 235px;
+    font-family: 'Open Sans', 'Schoolbell' 'Ubuntu Condensed';
+
+  }
+
+  html {
+    width: 100%;
+    height: 100vh;
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
+  
+
+    .Pro{
+      
+position: absolute;
+width: 68px;
+height: 0px;
+left: 343px;
+top: 37px;
+
+font-family: 'Schoolbell';
+font-style: normal;
+font-weight: 400;
+font-size: 50px;
+line-height: 0px;
+/* identical to box height, or 0% */
+
+display: flex;
+align-items: flex-end;
+text-transform: capitalize;
+
+color: #000000;
+
+transform: matrix(0.92, 0, -0.47, 1, 0, 0);
+    }
+    
+    .Sport{
+      position: absolute;
+width: 368.28px;
+height: 49.68px;
+left: 253.91px;
+top: 73.05px;
+
+font-family: 'Schoolbell';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 84px;
+display: flex;
+align-items: flex-end;
+
+color: #000000;
+
+mix-blend-mode: normal;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+transform: matrix(0.93, -0.02, -0.41, 1, 0, 0);
+    }
+
+    .O_nas{
+      
+position: absolute;
+width: 81px;
+height: 64px;
+left: 1056px;
+top: 42px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 39.5px;
+line-height: 64px;
+/* identical to box height, or 161% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.03em;
+text-transform: capitalize;
+text-decoration: none;
+color: #000000;
+
+    }
+   
+    .Otzivi{
+      position: absolute;
+width: 120px;
+height: 64px;
+left: 1238px;
+top: 41px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 39.5px;
+line-height: 64px;
+/* identical to box height, or 161% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.03em;
+text-transform: capitalize;
+text-decoration: none;
+
+color: #000000;
+    }
+
+    .Kontakti{
+      position: absolute;
+width: 139px;
+height: 64px;
+left: 1460px;
+top: 42px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 39.5px;
+line-height: 64px;
+/* identical to box height, or 161% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.03em;
+text-transform: capitalize;
+text-decoration: none;
+
+color: #000000;
+    }
+
+    .Glavnaya{
+      position: absolute;
+width: 114px;
+height: 64px;
+left: 1668px;
+top: 42px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 39.5px;
+line-height: 64px;
+/* identical to box height, or 161% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.03em;
+text-transform: capitalize;
+text-decoration: none;
+
+color: #000000;
+    }
+
+    .tovari_for_sport{
+      position: absolute;
+width: 385px;
+height: 73px;
+left: 400px;
+top: 51px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 145.8%;
+/* identical to box height, or 73px */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.04em;
+text-decoration: none;
+
+color: #000000;
+    }
+
+    .O_nas:hover, .O_nas:hover:focus, .O_nas:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .Otzivi:hover, .Otzivi:hover:focus, .Otzivi:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .Kontakti:hover, .Kontakti:hover:focus, .Kontakti:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .Glavnaya:hover, .Glavnaya:hover:focus, .Glavnaya:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .Podpisivaytes{
+      position: absolute;
+width: 517px;
+height: 80px;
+left: 700px;
+top: 1080px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 42px;
+line-height: 145.8%;
+/* or 87px */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.04em;
+
+color: #000000;
+
+opacity: 0.5;
+    }
+    
+
+    .vk{
+      position: absolute;
+width: 60px;
+height: 60px;
+left: 712px;
+top: 1167px;
+    }
+
+    .tg{   
+position: absolute;
+width: 60px;
+height: 60px;
+left: 862px;
+top: 1167px;
+    }
+
+    .youtube{
+      position: absolute;
+width: 60px;
+height: 60px;
+left: 1003px;
+top: 1167px;
+    }
+
+    .instagram{
+      position: absolute;
+width: 60px;
+height: 60px;
+left: 1144px;
+top: 1167px;
+
+
+    }
+
+    .instagram:hover, .instagram:focus, .instagram:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .youtube:hover, .youtube:focus, .youtube:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .tg:hover, .tg:focus, .tg:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+    .vk:hover, .vk:focus, .vk:active{
+      opacity: .75;
+      color: #717EBB;
+    }
+
+.otzivi2{
+  position: absolute;
+width: 285px;
+height: 64px;
+left: 184px;
+top: 171px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 70px;
+line-height: 64px;
+/* identical to box height, or 91% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.03em;
+text-transform: capitalize;
+
+color: #000000;
+}
+
+.Kontakti1{
+  position: absolute;
+width: 285px;
+height: 64px;
+left: 184px;
+top: 171px;
+
+font-family: 'Ubuntu Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 70px;
+line-height: 64px;
+/* identical to box height, or 91% */
+
+display: flex;
+align-items: flex-end;
+letter-spacing: -0.03em;
+text-transform: capitalize;
+
+color: #000000;
+}
+
+.vk2{
+  position: absolute;
+width: 60px;
+height: 60px;
+left: 184px;
+top: 279px;
+
+background: url(vk.png);
+}
+
+.tg2{
+  position: absolute;
+width: 60px;
+height: 60px;
+left: 334px;
+top: 279px;
+
+}
+
+.youtube2{
+  
+position: absolute;
+width: 60px;
+height: 60px;
+left: 475px;
+top: 279px;
+
+background: url(youtube.png);
+}
+
+.instagram2{
+  position: absolute;
+width: 60px;
+height: 60px;
+left: 616px;
+top: 279px;
+
+}
+
+
+.instagram2:hover, .instagram2:focus, .instagram2:active{
+  opacity: .75;
+  color: #717EBB;
+}
+
+.youtube2:hover, .youtube2:focus, .youtube2:active{
+  opacity: .75;
+  color: #717EBB;
+}
+
+.tg2:hover, .tg2:focus, .tg2:active{
+  opacity: .75;
+  color: #717EBB;
+}
+
+.vk2:hover, .vk2:focus, .vk2:active{
+  opacity: .75;
+  color: #717EBB;
+}
